@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title> Hello </title>
+  </head>
+  <body>
+    <h1> Home Page </h1>
+    <h2>Get your titanic predictions here </h2>
+    <p> Enter the details of the person here </p>
+
+    <form action="{% url 'result' %}">
+      {% csrf_token %}
+      <p>Pclass</p>
+      <input type="text" name="Pclass" >
+      <p>Sex</p>
+      <input type="text" name="Sex" >
+      <p>Age</p>
+      <input type="text" name="Age" >
+      <p>SibSp</p>
+      <input type="text" name="SibSp" >
+      <p>Parch</p>
+      <input type="text" name="Parch" >
+      <p>Fare</p>
+      <input type="text" name="Fare" >
+      <p>Embarked</p>
+      <input type="text" name="Embarked" >
+      <p>Title</p>
+      <input type="text" name="Title" >
+
+      <input type="submit">
+    </form>
+  </body>
+</html>
